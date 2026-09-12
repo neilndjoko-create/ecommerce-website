@@ -1,0 +1,170 @@
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            /*
+                 universal nav-bar and footer
+             */
+            
+            #logo {
+                font-family: initial !important;
+                font-size: 40px !important;
+            }
+            
+            nav #navlink {
+                position: absolute;
+                right: 42%;
+            }
+            
+            nav #navlink a:hover {
+                color: rgb(98, 216, 104) !important;
+            }
+            
+            #act1 {
+                position: relative;
+            }
+            
+            #card1 {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+            }
+            
+            #card1 a:hover {
+                color: rgb(98, 216, 114) !important;
+            }
+            
+            #act2 {
+                position: relative;
+            }
+            
+            #card2 {
+                position: absolute;
+                top: 5%;
+                right: 15%;
+            }
+            
+            #ca :hover {
+                color: white!important;
+            }
+            
+            nav #start {
+                padding-right: 110vh;
+                position: absolute;
+                top: 13%;
+                left: 10%;
+            }
+            
+            nav span {
+                font-size: 22px!important;
+            }
+            
+            nav #src {
+                width: 55vh;
+                border-radius: 20px;
+            }
+            
+            nav #end {
+                position: absolute!important;
+                top: 11%;
+                right: 12%;
+            }
+            
+            footer {
+                margin-top: 100%;
+            }
+            /*
+                 the hero section
+             */
+            
+            .hero {
+                height: 80vh;
+            }
+            
+            .hero-content {
+                padding-top: 2px;
+            }
+            
+            .hero-content .text {
+                color: white;
+                text-decoration: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 75px;
+                font-weight: bolder;
+                font-family: initial;
+            }
+            
+            .hero-content p {
+                font-size: 32px;
+            }
+            
+            .hero-section {
+                width: 100%;
+                height: 70vh;
+                margin: 2px;
+                background-image: linear-gradient(rgba(7, 24, 9, 0.7), rgba(5, 29, 26, 0.7), rgba(42, 112, 106, 0.7)), url('../ASSETS/images/hero/hero-banner4.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+            /*
+                 the main section
+             */
+            
+            .main h5 {
+                padding: 20px;
+                font-weight: bold;
+                font-family: initial;
+                font-size: 25px;
+            }
+            
+            #first {
+                padding: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                gap: 5px;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(251, 252, 252);
+            }
+            
+            #second {
+                padding: 20px;
+                display: flex;
+                justify-content: space-around;
+                gap: 5px;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(251, 252, 252);
+            }
+            
+            .under {
+                display: flex;
+                align-items: flex-start;
+                justify-content: left;
+                gap: 50px;
+                margin-top: 20px;
+            }
+            
+            #desc {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            #card img {
+                width: 50%;
+                height: 5%;
+            }
+            
+            #last {
+                background-color: rgb(173, 236, 173);
+                width: 500vw;
+                justify-content: space-around;
+                margin-bottom: 20px;
+                padding-top: 30px;
+            }
