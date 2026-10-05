@@ -1,0 +1,50 @@
+Data on diff pages.
+1. Home
+-Hero/Banners
+-Featured Categories
+-Features products(Images, Name, Price)
+-Promotional deal and search bar
+
+2. Product List
+-Product Card(Image, Name, Rating, "Add ro Cart")
+-Active Sorting/Filters
+-Pagination/result count
+
+3.Categories
+-Categories name
+-description
+-Subcategories
+-filtered Product 
+-cards(Image, Name, Price)
+
+4.Product detail
+-Image
+-Name
+-Price
+-Rating & Review
+-Description
+-Variants(size, colors)
+-Stock Status & Quantity selectors
+-"Add to cart"/"Buy Now"
+
+5. Cart
+-Selected Items(Images, Name, Variant, Price, Quantity, Subtotal)
+-Promo Code Input
+-Order Summary
+-Checkout Button
+
+6.Checkout
+-Order item summery
+-Customer info(Email, phone)
+-Billing Address
+-Shipping Method
+-Payement Detail
+-Total Price
+
+7.Confimation
+-Order ID
+-Order Date
+-Billing Address
+-Total Price
+-Estimated Delivration date
+*Confirmation message
