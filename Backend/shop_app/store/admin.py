@@ -5,8 +5,14 @@ from django.utils.html import format_html
 # Register your models here.
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display =["name", "slug"]
+    list_display =["name", "slug", "image_preview"]
+    randomly_fields =["image_preview"]
     prepopulated_fields = {"slug": ("name",)}
+    
+    def image_preview(self, obj):
+            if obj.image:
+                return format_html('<img src ="{}" width="60">', obj.image.url)
+            return "No image"
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
