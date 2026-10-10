@@ -48,3 +48,19 @@ Data on diff pages.
 -Total Price
 -Estimated Delivration date
 *Confirmation message
+
+-----------------------------------------------
+8. Order model
+-Customer name
+-Phone number
+-Address e-mail
+-Status
+-Date
+-Total price
+
+9.OrderItems models
+-Order number
+-Product
+-Quantity
+-date &time
+-Price
