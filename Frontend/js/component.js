@@ -33,7 +33,7 @@ function loadNavbar() {
                         <a class="nav-link text-dark" href="./shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="./product.html">product</a>
+                        <a class="nav-link text-dark" href="./product_.html">product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="./about.html">About</a>
@@ -97,7 +97,7 @@ function loadFooter() {
                             <a class="nav-link text-light" href="./shop.html">Shop</a>
                         </li>
                         <li class="mb-2">
-                            <a class="nav-link text-light" href="./product.html">product</a>
+                            <a class="nav-link text-light" href="./product_list.html">product</a>
                         </li>
                         <li class="mb-2">
                             <a class="nav-link text-light" href="./about.html">About</a>

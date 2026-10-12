@@ -64,3 +64,8 @@ Data on diff pages.
 -Quantity
 -date &time
 -Price
+-----------------------------------------------
+My Stores
+* /store/
+* /store/category/<slug>/
+* /store/product/<slug>/
