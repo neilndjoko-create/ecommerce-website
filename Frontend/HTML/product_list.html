@@ -1,13 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/front.css/fontawesome-free-7.3.0-web/css/all.min.css">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/front.css/fontawesome-free-7.3.0-web/css/all.min.css' %}">
 
 </head>
 
@@ -17,26 +18,69 @@
 
 
     <main>
-        <h1>Products</h1>
-        {% for product in products %}
-        <div>
-            <img src="{{ product.image.url}}" width="100">
-            <h3>{{ product.name }}</h3>
-            <p>{{product.price}} FCFA</p>
-        </div>
-        {% empty %}
-        <p>No product yet .</p>
-        {% endfor %}
+        <h1 id="shop">Shop</h1>
+        <h5>Categories</h5>
+        <section class="container_s d-flex flex-column flex-md-row gap-3 mt-3 mt-md-3 ">
+
+            <section class="fw-bold  gap-4 bg-light h-100  p-2 row" id="side_bar">
+
+                <div class="gap-4 ">
+                    <div class=" gap-5 col-12">
+                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-home "></i>
+                All</button>
+                    </div>
+                    <div class="sideicon gap-5 col-12">
+                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-shirt "></i> Clothes
+                        </button>
+                    </div>
+                    <div class="sideicon gap-5 col-12">
+                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-bag-shopping "></i>
+                Bags</button>
+                    </div>
+                    <div class="sideicon gap-5 col-12">
+                        <button class="btn btn-outline-success border-0 "><i class="fa-regular fa-clock "></i>
+                Watches</button>
+                    </div>
+                    <div class="sideicon gap-5 col-12">
+                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-shoe-prints "></i>
+                Sneakers</button>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid">
+                <div class="row g-4">
+                    {% for product in products %}
+                    <div class="col-6 col-md-4 col-lg-3 bg-light">
+                        <div class="card w-100 boder-0 shadow-md">
+                            <div class="ratio ratio-1x1" id="img_p">
+                                <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} ">
+                                <span><i class="fa-solid fa-heart btn text-danger"></i></span>
+                            </div>
+                            <div class="card-body text-center display-flex lex-column">
+                                <h6 class="card-title mb-1">{{ product.name }}</h6>
+                                <p class="card-text fw-bold mb-1">{{ product.price|floatformat:0 }} FCFA</p>
+                                <a href="# " class="btn btn-primary mt-auto"> <i class="fa-solid fa-shopping-cart"></i> Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>No product yet .</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </section>
+
     </main>
 
     <div id="footer"></div>
 
-    <script src="../js/jquery/jquery-4.0.0.min.js"></script>
-    <script src="../js/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script src="../js/component.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/product.js"></script>
+    <script src="{% static 'js/jquery/jquery-4.0.0.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap-5.0.2-dist/js/bootstrap.min.js' %} "></script>
+    <script src="{% static 'js/component.js' %} "></script>
+    <script src="{% static 'js/cart.js' %} "></script>
+    <script src="{% static 'js/main.js' %} "></script>
+    <script src="{% static 'js/product.js' %} "></script>
     <script>
         loadNavbar();
         loadFooter();

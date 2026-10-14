@@ -22,31 +22,30 @@ function loadNavbar() {
             <div class="container-fluid d-flex">
                 <a class="navbar-brand fw-bold text-success fs-3" id='logo'
                 href="#">ShopEasy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       
     </button>
                 <ul class="nav justify-content-center" id="navlink">
                     <li class="nav-item">
                         <a class="nav-link active text-dark" aria-current="page" href="./home.html">Home</a>
                     </li>
+                   
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="./shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="./product_.html">product</a>
+                        <a class="nav-link text-dark" href="/store/">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="./contact.html">contact</a>
+                        <a class="nav-link text-dark" href="./contact.html">Contact</a>
                     </li>
                 </ul>
             
             </div>
                     <div class="d-flex justify-content-end " id="end">
                    
-                    <span class="item text-dark pt-1 btn mt-3" id="act2" title="profile"><i class="fa-solid fa-circle-user"></i></span>
+                    <span class="item text-dark pt-1 btn mt-3" id="act2" title="profile"><a class="nav-link text-dark " href="./signup.html"><i class="fa-solid fa-circle-user"></i></span></a>
                     <span class="item text-danger pt-1 btn mt-2" id="ht1" title="whishlist"><a  class="nav-link text-danger " href="./wishlist.html"><i class="fa-solid fa-heart"></i></span></a>
                     <span class="item text-dark pt-1 btn mt-2" id="loop" title="Cart"><a href="./cart.html" class="nav-link text-dark"><i class="fa-solid fa-bag-shopping"></i></span></a>
                     <button class="btn btn-outline-success 4 h-75 mt-3" id="act1">More</button></div>
@@ -66,17 +65,7 @@ function loadNavbar() {
 
         </ul>
     </div>
-    <div class="card m-5 bg-dark " style="width: 18rem ;" id="card2">
-        <ul class="list-group  fw-bold text-center fs-6">
-            <li class="list-group-item">
-                <button class="btn btn-primary fw-bold"> <a class="nav-link text-light " href="./signup.html">Signup</a></button>
-            </li>
-            <li class="list-group-item">
-                <button class="btn btn-outline-dark " id="ca"><a class="nav-link text-secondary fw-bold " href="./login.html">Join</a></button>
-            </li>
-
-        </ul>
-    </div>`;
+   `;
     document.getElementById('navbar').innerHTML = navbarHTML;
 }
 
@@ -93,11 +82,9 @@ function loadFooter() {
                         <li class="mb-2">
                             <a class="nav-link active text-light" aria-current="page" href="./home.html">Home</a>
                         </li>
+                       
                         <li class="mb-2">
-                            <a class="nav-link text-light" href="./shop.html">Shop</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="nav-link text-light" href="./product_list.html">product</a>
+                            <a class="nav-link text-light" href="/store/">Shop</a>
                         </li>
                         <li class="mb-2">
                             <a class="nav-link text-light" href="./about.html">About</a>
