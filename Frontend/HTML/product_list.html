@@ -22,30 +22,22 @@
         <h5>Categories</h5>
         <section class="container_s d-flex flex-column flex-md-row gap-3 mt-3 mt-md-3 ">
 
-            <section class="fw-bold  gap-4 bg-light h-100  p-2 row" id="side_bar">
+            <section class="fw-bold  gap-4 bg-light h-100  p-0 row" id="side_bar">
 
                 <div class="gap-4 ">
                     <div class=" gap-5 col-12">
-                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-home "></i>
-                All</button>
+                    <a href="{% url 'product_list' %}" class="btn btn-outline-success border-0 w-100"><i class="fa-solid fa-home "></i>All</a>
                     </div>
+
+                    {% for category in categories %}
                     <div class="sideicon gap-5 col-12">
-                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-shirt "></i> Clothes
-                        </button>
+                     <a href="{% url 'category_product' category.slug %}" class="btn  btn-outline-success border-0 w-100">
+                    {{category.name}}</a>
                     </div>
-                    <div class="sideicon gap-5 col-12">
-                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-bag-shopping "></i>
-                Bags</button>
-                    </div>
-                    <div class="sideicon gap-5 col-12">
-                        <button class="btn btn-outline-success border-0 "><i class="fa-regular fa-clock "></i>
-                Watches</button>
-                    </div>
-                    <div class="sideicon gap-5 col-12">
-                        <button class="btn btn-outline-success border-0 "><i class="fa-solid fa-shoe-prints "></i>
-                Sneakers</button>
-                    </div>
-                </div>
+                    {% endfor %}
+
+
+
             </section>
             <section class="container-fluid">
                 <div class="row g-4">
