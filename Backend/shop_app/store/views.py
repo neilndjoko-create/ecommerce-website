@@ -17,3 +17,10 @@ def category_product(request, slug):
         "category":category,
         "products":Products,
          "categories":categories})
+    
+    
+def product_detail(request, slug):
+     product = get_object_or_404(Product, slug=slug)
+     
+     return render(request, "product_detail.html",{
+         "product":product,})

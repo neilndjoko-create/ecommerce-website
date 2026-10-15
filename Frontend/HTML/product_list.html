@@ -26,12 +26,12 @@
 
                 <div class="gap-4 ">
                     <div class=" gap-5 col-12">
-                    <a href="{% url 'product_list' %}" class="btn btn-outline-success border-0 w-100"><i class="fa-solid fa-home "></i>All</a>
+                        <a href="{% url 'product_list' %}" class="btn btn-outline-success border-0 w-100"><i class="fa-solid fa-home "></i>  All</a>
                     </div>
 
                     {% for category in categories %}
                     <div class="sideicon gap-5 col-12">
-                     <a href="{% url 'category_product' category.slug %}" class="btn  btn-outline-success border-0 w-100">
+                        <a href="{% url 'category_product' category.slug %}" class="btn  btn-outline-success border-0 w-100">
                     {{category.name}}</a>
                     </div>
                     {% endfor %}
@@ -42,14 +42,18 @@
             <section class="container-fluid">
                 <div class="row g-4">
                     {% for product in products %}
-                    <div class="col-6 col-md-4 col-lg-3 bg-light">
-                        <div class="card w-100 boder-0 shadow-md">
-                            <div class="ratio ratio-1x1" id="img_p">
-                                <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} ">
-                                <span><i class="fa-solid fa-heart btn text-danger"></i></span>
-                            </div>
+                    <div class="col-6 col-md-4 col-lg-3 bg-light ">
+                        <div class="card w-100 boder-0 shadow-md " id="p_card">
+                            <a href="{% url 'product_detail' product.slug %}" class="">
+                                <div class="ratio ratio-1x1" id="img_p">
+                                    <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} ">
+                                    <span id="like"><i class="fa-solid fa-heart btn text-danger"></i></span>
+                                </div>
+                            </a>
                             <div class="card-body text-center display-flex lex-column">
-                                <h6 class="card-title mb-1">{{ product.name }}</h6>
+                                <a href="{% url 'product_detail' product.slug %}" class=" text-dark text-decoration-none">
+                                    <h6 class="card-title mb-1">{{ product.name }}</h6>
+                                </a>
                                 <p class="card-text fw-bold mb-1">{{ product.price|floatformat:0 }} FCFA</p>
                                 <a href="# " class="btn btn-primary mt-auto"> <i class="fa-solid fa-shopping-cart"></i> Add to Cart</a>
                             </div>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/front.css/fontawesome-free-7.3.0-web/css/all.min.css' %}">
+
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="container">
+
+        <div class="d-flex flex-column flex-md-row gap-3 mt-2 mt-md-3">
+
+            <div> <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} "></div>
+
+            <div class="info">
+                <h1 id="product">{{product.name}}</h1>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="{% static 'js/jquery/jquery-4.0.0.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap-5.0.2-dist/js/bootstrap.min.js' %} "></script>
+    <script src="{% static 'js/component.js' %} "></script>
+    <script src="{% static 'js/cart.js' %} "></script>
+    <script src="{% static 'js/main.js' %} "></script>
+    <script src="{% static 'js/product.js' %} "></script>
+    <script>
+        loadNavbar();
+    </script>
+</body>
+
+</html>
