@@ -189,11 +189,10 @@
             padding-top: 30px;
         }
         /*The shop sections*/
-        
-        #card_shop {
+        /* #card_shop {
             display: grid !important;
             grid-template-columns: 1fr 4fr !important;
-        }
+        } */
         
         #shop {
             font-size: 75px !important;
@@ -210,7 +209,7 @@
             }
         }
         
-        #like {
+        .like {
             position: absolute;
             top: 1%;
             left: 40%;
@@ -231,4 +230,9 @@
         #product {
             font-size: 75px !important;
             font-family: initial !important;
+        }
+        
+        #card_product {
+            display: grid !important;
+            grid-template-columns: 4fr 1fr !important;
         }

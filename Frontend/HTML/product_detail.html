@@ -15,18 +15,49 @@
 <body>
     <div id="navbar"></div>
 
-    <div class="container">
+    <div class="container d-flex flex-column flex-md-row gap-5 mt-2 mt-md-3 px-6 ">
 
-        <div class="d-flex flex-column flex-md-row gap-3 mt-2 mt-md-3">
+        <div class="d-flex flex-column flex-md-row gap-5 mt-2 mt-md-3">
 
-            <div> <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} "></div>
+            <div class=""> <img src="{{ product.image.url}} " class="object-fit-cover " alt="{{ product.name }} "></div>
 
             <div class="info">
+                <small> 
+                    {{category.name}}</small>
                 <h1 id="product">{{product.name}}</h1>
+                <small class="fw-bold text-success">{{product.price}} FCFA</small><br>
+                <div class="rating d-flex align-items-center gap-2">
+                    <small class=""><i class="fa-solid fa-star"></i></small>
+                    <small class=""><i class="fa-solid fa-star"></i></small>
+                    <small class=""><i class="fa-solid fa-star"></i></small>
+                </div>
+                <p>{{product.description}}</p>
+                <div class="d-flex gap-3">
+                    <a href="# " class="btn btn-primary mt-auto"> <i class="fa-solid fa-shopping-cart"></i> Add to Cart</a>
+                    <span class="btn  btn-outline-danger"><i class="fa-solid fa-heart "></i>
+                </div>
+
             </div>
         </div>
 
+        <div class="row fw-bold  gap-5 bg-light h-100 p-4 align-item-end">
+            <h5>Categories</h5>
 
+            <div class="gap-4 ">
+                <div class=" gap-5 col-12">
+                    <a href="{% url 'product_list' %}" class="btn btn-outline-success border-0 w-100"><i class="fa-solid fa-home "></i>  All</a>
+                </div>
+
+                {% for category in categories %}
+                <div class="sideicon gap-5 col-12">
+                    <a href="{% url 'category_product' category.slug %}" class="btn  btn-outline-success border-0 w-100">
+                    {{category.name}}</a>
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
     </div>
     <script src="{% static 'js/jquery/jquery-4.0.0.min.js' %} "></script>
     <script src="{% static 'js/bootstrap-5.0.2-dist/js/bootstrap.min.js' %} "></script>
